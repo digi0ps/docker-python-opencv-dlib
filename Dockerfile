@@ -23,6 +23,7 @@ RUN mkdir -p ~/dlib \
     && make install \
     && ldconfig
 
+# Install packages for Python
 RUN pkg-config --libs --cflags dlib-1 \
     && cd ~/dlib/dlib-19.16 \
     && python setup.py install \
